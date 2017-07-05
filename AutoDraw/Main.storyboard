@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="drawView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-fH-BGq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPx-HX-OVl">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Guess" id="CFo-Kj-6uE">
+                                        <connections>
+                                            <action selector="guessTapped:" destination="BYZ-38-t0r" id="N5a-Kp-Zo9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="300" style="plain" id="bzW-M9-pKP"/>
+                                    <barButtonItem title="Clear" id="Hp3-dK-qUH">
+                                        <connections>
+                                            <action selector="clearTapped:" destination="BYZ-38-t0r" id="joh-0L-w39"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-da-nS9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="N1u-3g-0IL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fPx-HX-OVl" secondAttribute="bottom" id="8ek-4w-1a3"/>
+                            <constraint firstItem="fPx-HX-OVl" firstAttribute="leading" secondItem="j9U-fH-BGq" secondAttribute="leading" id="IvX-Vx-3gy"/>
+                            <constraint firstItem="ELW-da-nS9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="MLN-tS-TrY"/>
+                            <constraint firstItem="ELW-da-nS9" firstAttribute="trailing" secondItem="j9U-fH-BGq" secondAttribute="trailing" id="YGZ-LO-B1r"/>
+                            <constraint firstItem="j9U-fH-BGq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZrP-9U-eXz"/>
+                            <constraint firstItem="ELW-da-nS9" firstAttribute="centerX" secondItem="j9U-fH-BGq" secondAttribute="centerX" id="cJs-Zz-bFK"/>
+                            <constraint firstItem="j9U-fH-BGq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jtp-bC-UYU"/>
+                            <constraint firstItem="fPx-HX-OVl" firstAttribute="trailing" secondItem="j9U-fH-BGq" secondAttribute="trailing" id="kFX-6E-yvY"/>
+                            <constraint firstAttribute="trailing" secondItem="j9U-fH-BGq" secondAttribute="trailing" id="rUT-0H-dlN"/>
+                            <constraint firstItem="fPx-HX-OVl" firstAttribute="top" secondItem="j9U-fH-BGq" secondAttribute="bottom" id="tfC-0J-OWV"/>
+                            <constraint firstItem="ELW-da-nS9" firstAttribute="leading" secondItem="j9U-fH-BGq" secondAttribute="leading" id="vti-bq-apr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgCanvas" destination="j9U-fH-BGq" id="nCb-It-ZKf"/>
+                        <outlet property="object" destination="ELW-da-nS9" id="mK9-ff-PjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>
